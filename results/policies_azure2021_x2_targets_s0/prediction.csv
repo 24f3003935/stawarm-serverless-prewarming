@@ -1,0 +1,13 @@
+model,target,bucket,auprc,base_rate
+"own + app, no lead",lead-shifted,rare,0.1844694485421279,0.0010276666666666667
+"own + app, no lead",lead-shifted,medium,0.9320403410912096,0.08355866666666667
+"own + app, no lead",near-term,rare,0.18010795696246865,0.001058
+"own + app, no lead",near-term,medium,0.9392379022098163,0.08362633333333333
+own + app + lead,lead-shifted,rare,0.23285409874188356,0.001037
+own + app + lead,lead-shifted,medium,0.9346177774877427,0.08355666666666667
+own + app + lead,near-term,rare,0.23293819820028439,0.0010673333333333333
+own + app + lead,near-term,medium,0.9363887162614846,0.083563
+"own + app, union window",lead-shifted,rare,0.20134933612239292,0.0010696666666666667
+"own + app, union window",lead-shifted,medium,0.9333356349131399,0.08364
+"own + app, union window",near-term,rare,0.2027022848655039,0.0010656666666666666
+"own + app, union window",near-term,medium,0.9402250230355719,0.083713

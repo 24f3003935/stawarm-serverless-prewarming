@@ -1,0 +1,114 @@
+                          family     param cold_rate cold_rare cold_medium  added_latency_ms_per_call  memory_vs_keepalive10
+                fixed keep-alive     1 min    15.33%    12.41%      11.01%                      205.6                   0.32
+                fixed keep-alive     2 min     8.91%    11.22%        9.6%                      131.0                   0.54
+                fixed keep-alive     5 min     1.77%     9.74%       1.71%                       28.6                   0.89
+                fixed keep-alive    10 min     1.16%     8.88%       1.04%                       18.7                   1.00
+                fixed keep-alive    20 min     0.85%     7.35%        0.7%                       12.7                   1.16
+                fixed keep-alive    60 min     0.53%     5.79%        0.4%                        7.9                   1.60
+                hybrid histogram 4 h range     0.51%     4.56%       0.42%                        7.7                   1.75
+     learned: own + app, no lead      0.02     0.23%     1.62%       0.01%                        4.0                   3.33
+     learned: own + app, no lead      0.05     0.32%     3.05%       0.08%                        5.7                   2.38
+     learned: own + app, no lead       0.1      0.7%     3.85%        0.2%                       14.4                   1.56
+     learned: own + app, no lead      0.15     0.79%     4.52%       0.23%                       16.0                   1.25
+     learned: own + app, no lead       0.2     0.89%     5.12%       0.28%                       18.0                   1.04
+     learned: own + app, no lead      0.25     0.95%      6.0%       0.32%                       18.9                   0.91
+     learned: own + app, no lead       0.3     1.03%     6.61%       0.39%                       20.0                   0.82
+     learned: own + app, no lead       0.4     1.18%     7.98%       0.51%                       22.2                   0.73
+     learned: own + app, no lead       0.5     1.39%     9.01%       0.63%                       24.7                   0.66
+     learned: own + app, no lead       0.6      2.8%     9.76%       0.73%                       37.1                   0.62
+     learned: own + app, no lead       0.7     7.53%    10.07%        0.8%                       95.8                   0.52
+     learned: own + app, no lead       0.8     7.73%    10.56%       0.96%                       98.7                   0.48
+     learned: own + app, no lead       0.9     8.27%    11.05%        1.6%                      107.1                   0.45
+       learned: own + app + lead      0.02     0.23%     1.66%       0.02%                        4.1                   3.36
+       learned: own + app + lead      0.05     0.31%      2.8%       0.07%                        5.2                   2.40
+       learned: own + app + lead       0.1     0.45%     3.79%        0.2%                        7.5                   1.56
+       learned: own + app + lead      0.15     0.59%     4.42%       0.23%                       10.8                   1.21
+       learned: own + app + lead       0.2     0.82%     5.12%       0.28%                       15.9                   1.02
+       learned: own + app + lead      0.25     0.89%     6.09%       0.34%                       16.9                   0.87
+       learned: own + app + lead       0.3     1.03%     6.94%        0.4%                       19.9                   0.80
+       learned: own + app + lead       0.4     1.17%     8.17%       0.53%                       22.1                   0.71
+       learned: own + app + lead       0.5     1.33%     9.13%       0.65%                       24.5                   0.65
+       learned: own + app + lead       0.6     2.35%     9.63%       0.74%                       32.0                   0.60
+       learned: own + app + lead       0.7     7.53%     9.96%       0.78%                       95.8                   0.51
+       learned: own + app + lead       0.8     7.72%    10.48%       0.93%                       98.4                   0.48
+       learned: own + app + lead       0.9     8.31%    10.94%       1.65%                      107.2                   0.46
+learned: own + app, union window      0.02     0.24%     1.41%       0.01%                        4.2                   3.35
+learned: own + app, union window      0.05      0.6%     2.55%       0.07%                       12.9                   2.47
+learned: own + app, union window       0.1      0.8%     3.58%        0.2%                       17.0                   1.49
+learned: own + app, union window      0.15     0.89%     4.22%       0.24%                       18.1                   1.21
+learned: own + app, union window       0.2     1.06%     5.14%       0.29%                       19.7                   1.01
+learned: own + app, union window      0.25     3.49%     5.84%       0.32%                       38.4                   0.84
+learned: own + app, union window       0.3     6.89%     6.59%       0.37%                       87.4                   0.74
+learned: own + app, union window       0.4     7.05%     7.79%       0.48%                       89.8                   0.65
+learned: own + app, union window       0.5      7.4%     8.48%       0.58%                       93.6                   0.61
+learned: own + app, union window       0.6     7.53%     9.19%       0.67%                       95.5                   0.56
+learned: own + app, union window       0.7     7.61%     9.89%       0.76%                       96.9                   0.52
+learned: own + app, union window       0.8     7.78%    10.26%       0.97%                      100.1                   0.49
+learned: own + app, union window       0.9     8.22%    11.06%       1.53%                      106.6                   0.46
+
+Prediction quality (AUPRC, real lead-time target, test period):
+                  model       target bucket  auprc  base_rate
+     own + app, no lead lead-shifted   rare 0.1845     0.0010
+     own + app, no lead lead-shifted medium 0.9320     0.0836
+     own + app, no lead    near-term   rare 0.1801     0.0011
+     own + app, no lead    near-term medium 0.9392     0.0836
+       own + app + lead lead-shifted   rare 0.2329     0.0010
+       own + app + lead lead-shifted medium 0.9346     0.0836
+       own + app + lead    near-term   rare 0.2329     0.0011
+       own + app + lead    near-term medium 0.9364     0.0836
+own + app, union window lead-shifted   rare 0.2013     0.0011
+own + app, union window lead-shifted medium 0.9333     0.0836
+own + app, union window    near-term   rare 0.2027     0.0011
+own + app, union window    near-term medium 0.9402     0.0837
+
+Cold-start rate by cold-start duration (functions per group: {'lead 1s': 56, 'lead 2-5s': 335, 'lead >5s': 33}):
+                          family  param cold_lead 1s cold_lead 2-5s cold_lead >5s  memory_vs_keepalive10
+                fixed keep-alive 10 min        0.47%          1.39%         5.97%                   1.00
+     learned: own + app, no lead   0.02        0.09%          0.28%         0.48%                   3.33
+     learned: own + app, no lead   0.05        0.12%           0.4%         1.24%                   2.38
+     learned: own + app, no lead    0.1        0.17%          0.76%         10.9%                   1.56
+     learned: own + app, no lead   0.15         0.2%          0.86%        11.25%                   1.25
+     learned: own + app, no lead    0.2        0.24%          0.98%        11.76%                   1.04
+     learned: own + app, no lead   0.25        0.28%          1.06%        12.14%                   0.91
+     learned: own + app, no lead    0.3        0.33%          1.15%        12.51%                   0.82
+     learned: own + app, no lead    0.4        0.43%          1.29%        13.99%                   0.73
+     learned: own + app, no lead    0.5        0.72%          1.44%         15.1%                   0.66
+     learned: own + app, no lead    0.6        3.73%          2.11%        16.04%                   0.62
+     learned: own + app, no lead    0.7         5.8%          8.17%        16.52%                   0.52
+     learned: own + app, no lead    0.8        5.89%          8.42%        16.93%                   0.48
+     learned: own + app, no lead    0.9        6.04%          9.13%        17.47%                   0.45
+       learned: own + app + lead   0.02        0.09%          0.29%         0.48%                   3.36
+       learned: own + app + lead   0.05        0.12%          0.38%         0.91%                   2.40
+       learned: own + app + lead    0.1        0.17%          0.56%         1.91%                   1.56
+       learned: own + app + lead   0.15         0.2%          0.69%         5.17%                   1.21
+       learned: own + app + lead    0.2        0.25%          0.88%        11.57%                   1.02
+       learned: own + app + lead   0.25        0.29%          0.96%         12.3%                   0.87
+       learned: own + app + lead    0.3        0.33%          1.13%        12.92%                   0.80
+       learned: own + app + lead    0.4        0.41%          1.28%        14.21%                   0.71
+       learned: own + app + lead    0.5        0.48%          1.45%        15.53%                   0.65
+       learned: own + app + lead    0.6         3.5%          1.56%        16.01%                   0.60
+       learned: own + app + lead    0.7        5.79%          8.16%         16.5%                   0.51
+       learned: own + app + lead    0.8        5.89%          8.41%        16.77%                   0.48
+       learned: own + app + lead    0.9        6.07%          9.17%        17.81%                   0.46
+learned: own + app, union window   0.02         0.1%          0.29%         0.48%                   3.35
+learned: own + app, union window   0.05        0.14%          0.63%         9.98%                   2.47
+learned: own + app, union window    0.1         0.2%           0.9%        10.74%                   1.49
+learned: own + app, union window   0.15        0.24%           1.0%        11.09%                   1.21
+learned: own + app, union window    0.2        0.59%          1.08%        11.46%                   1.01
+learned: own + app, union window   0.25        4.83%          2.71%        11.95%                   0.84
+learned: own + app, union window    0.3        5.25%          7.55%        12.27%                   0.74
+learned: own + app, union window    0.4        5.34%          7.73%        13.05%                   0.65
+learned: own + app, union window    0.5        5.75%          8.04%        14.18%                   0.61
+learned: own + app, union window    0.6        5.82%          8.18%         15.1%                   0.56
+learned: own + app, union window    0.7        5.84%          8.28%        15.85%                   0.52
+learned: own + app, union window    0.8        5.87%           8.5%        16.47%                   0.49
+learned: own + app, union window    0.9        6.03%          9.07%        17.12%                   0.46
+
+Best cold-start rate per policy family using no more memory than a 10-minute keep-alive:
+                          family  param  cold_rate  memory_vs_keepalive10
+       learned: own + app + lead   0.25     0.0089                 0.8736
+     learned: own + app, no lead   0.25     0.0095                 0.9077
+                fixed keep-alive 10 min     0.0116                 1.0000
+learned: own + app, union window   0.25     0.0349                 0.8365
+
+finished in 41.7 min

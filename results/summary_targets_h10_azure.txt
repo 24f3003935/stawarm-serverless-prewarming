@@ -1,0 +1,29 @@
+Runs: 3 (policies_azure2021_h10_targets_s0, policies_azure2021_h10_targets_s1, policies_azure2021_h10_targets_s2)
+10-minute keep-alive: 1.16% cold at memory 1.00
+
+Hybrid histogram: 0.51% cold at memory 1.61 (mean over runs)
+
+Cold-start rate at matched memory (mean +/- sd over runs; 'better' = runs below keep-alive; p = paired t-test vs keep-alive at 1.0x, p_holm = Holm-corrected over all policies listed):
+  own + app, no lead                  @0.8x 1.54% +/- 0.63%; @1.0x 0.89% +/- 0.36%; 23.4% fewer than keep-alive; better in 2/3; p=0.327, p_holm=0.982; slow fns @1.0x 17.78%
+  own + app + lead                    @0.8x 2.80% +/- 2.49%; @1.0x 1.72% +/- 0.92%; -48.6% fewer than keep-alive; better in 1/3; p=0.400, p_holm=0.982; slow fns @1.0x 29.67%
+  own + app, union window             @0.8x 1.31% +/- 0.73%; @1.0x 0.98% +/- 0.56%; 15.6% fewer than keep-alive; better in 2/3; p=0.636, p_holm=0.982; slow fns @1.0x 21.97%
+
+Paired differences at 1.0x vs 'own + app, no lead' (negative = better):
+  own + app + lead                    mean +0.833 pts, better in 0/3, p=0.312
+  own + app, union window             mean +0.090 pts, better in 2/3, p=0.521
+
+Prediction quality (AUPRC vs the true target, mean/sd over runs):
+                                               mean     std  count
+model                   target       bucket                       
+own + app + lead        lead-shifted medium  0.7980  0.0075      3
+                                     rare    0.2499  0.0852      3
+                        near-term    medium  0.8011  0.0101      3
+                                     rare    0.2597  0.0896      3
+own + app, no lead      lead-shifted medium  0.7782  0.0257      3
+                                     rare    0.2383  0.1228      3
+                        near-term    medium  0.7908  0.0236      3
+                                     rare    0.2616  0.1539      3
+own + app, union window lead-shifted medium  0.7178  0.0952      3
+                                     rare    0.1907  0.0314      3
+                        near-term    medium  0.7278  0.0947      3
+                                     rare    0.1803  0.0298      3

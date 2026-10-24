@@ -1,0 +1,43 @@
+Runs: 3 (policies_huawei_day30_predictors_s0, policies_huawei_day30_predictors_s1, policies_huawei_day30_predictors_s2)
+10-minute keep-alive: 0.50% cold at memory 1.00
+
+Hybrid histogram: 0.22% cold at memory 2.01 (mean over runs)
+
+Cold-start rate at matched memory (mean +/- sd over runs; 'better' = runs below keep-alive; p = paired t-test vs keep-alive at 1.0x, p_holm = Holm-corrected over all policies listed):
+  own + app, no lead                  @0.8x 0.11% +/- 0.00%; @1.0x 0.09% +/- 0.00%; 81.4% fewer than keep-alive; better in 3/3; p=0.000, p_holm=0.000; slow fns @1.0x 1.16%
+  LSTM-full (no attention)            @0.8x 0.32% +/- 0.12%; @1.0x 0.20% +/- 0.07%; 60.7% fewer than keep-alive; better in 3/3; p=0.015, p_holm=0.015; slow fns @1.0x 2.18%
+  STAWarm-full (LSTM + app attention) @0.8x 0.18% +/- 0.02%; @1.0x 0.13% +/- 0.01%; 73.6% fewer than keep-alive; better in 3/3; p=0.000, p_holm=0.001; slow fns @1.0x 1.94%
+  ensemble (trees + LSTM-full)        @0.8x 0.13% +/- 0.03%; @1.0x 0.11% +/- 0.02%; 78.9% fewer than keep-alive; better in 3/3; p=0.001, p_holm=0.002; slow fns @1.0x 1.34%
+
+Paired differences at 1.0x vs 'own + app, no lead' (negative = better):
+  LSTM-full (no attention)            mean +0.104 pts, better in 0/3, p=0.124
+  STAWarm-full (LSTM + app attention) mean +0.039 pts, better in 0/3, p=0.006
+  ensemble (trees + LSTM-full)        mean +0.012 pts, better in 1/3, p=0.488
+
+Prediction quality (AUPRC vs the true target, mean/sd over runs):
+                                                             mean     std  count
+model                               target       bucket                         
+LSTM-full (no attention)            lead-shifted frequent  0.9949  0.0003      3
+                                                 medium    0.4299  0.1491      3
+                                                 rare      0.3637  0.0977      3
+                                    near-term    frequent  0.9949  0.0003      3
+                                                 medium    0.4311  0.1511      3
+                                                 rare      0.3679  0.1004      3
+STAWarm-full (LSTM + app attention) lead-shifted frequent  0.9951  0.0006      3
+                                                 medium    0.6265  0.0289      3
+                                                 rare      0.1316  0.1664      3
+                                    near-term    frequent  0.9951  0.0006      3
+                                                 medium    0.6343  0.0262      3
+                                                 rare      0.1274  0.1618      3
+ensemble (trees + LSTM-full)        lead-shifted frequent  0.9953  0.0006      3
+                                                 medium    0.7173  0.0401      3
+                                                 rare      0.3869  0.0389      3
+                                    near-term    frequent  0.9953  0.0006      3
+                                                 medium    0.7274  0.0439      3
+                                                 rare      0.3701  0.0507      3
+own + app, no lead                  lead-shifted frequent  0.9800  0.0077      3
+                                                 medium    0.8230  0.0196      3
+                                                 rare      0.1927  0.1480      3
+                                    near-term    frequent  0.9802  0.0076      3
+                                                 medium    0.8386  0.0119      3
+                                                 rare      0.1834  0.1350      3

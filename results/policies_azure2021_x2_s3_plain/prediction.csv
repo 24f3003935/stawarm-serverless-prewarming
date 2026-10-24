@@ -1,0 +1,5 @@
+model,target,bucket,auprc,base_rate
+"own + app, no lead",lead-shifted,rare,0.19487254916747387,0.0010633333333333332
+"own + app, no lead",lead-shifted,medium,0.9115480073762717,0.08342566666666666
+"own + app, no lead",near-term,rare,0.21601404125366827,0.001069
+"own + app, no lead",near-term,medium,0.9406728672392273,0.083572

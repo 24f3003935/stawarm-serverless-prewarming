@@ -1,0 +1,13 @@
+model,target,bucket,auprc,base_rate
+"own + app, no lead",lead-shifted,rare,0.19604847679889187,0.0010896666666666667
+"own + app, no lead",lead-shifted,medium,0.9315466223779517,0.08367366666666666
+"own + app, no lead",near-term,rare,0.18609074789604438,0.0010716666666666667
+"own + app, no lead",near-term,medium,0.9376146044713377,0.08362333333333333
+call rate only (no learning),lead-shifted,rare,0.00530566573136919,0.0010693333333333334
+call rate only (no learning),lead-shifted,medium,0.1889615410919177,0.08368533333333333
+call rate only (no learning),near-term,rare,0.005053195502553243,0.0010716666666666667
+call rate only (no learning),near-term,medium,0.18902004676403497,0.08349133333333333
+state-aware (trees),lead-shifted,rare,0.19557533939906652,0.0010643333333333334
+state-aware (trees),lead-shifted,medium,0.9329818024018731,0.08344366666666667
+state-aware (trees),near-term,rare,0.19581159103084605,0.0010716666666666667
+state-aware (trees),near-term,medium,0.9373873345618253,0.08379033333333333

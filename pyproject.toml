@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stawarm"
+version = "1.0.0"
+description = "Controlled study of learned pre-warming for serverless cold starts: simulator, policies, STAWarm model and experiments"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "pandas>=2.1", "pyarrow>=14", "scipy>=1.11", "scikit-learn>=1.4",
+                "matplotlib>=3.8", "torch>=2.2", "gdown>=5.1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

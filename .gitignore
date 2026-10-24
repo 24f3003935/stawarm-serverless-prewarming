@@ -1,0 +1,30 @@
+# trace data is never committed (all traces are public; see README); results/ holds the paper's run files
+/data/
+/reproduction/
+results/figures/
+results/tables/
+*.png
+*.parquet
+*.npz
+*.npy
+*.zip
+*.rar
+*.tar.xz
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

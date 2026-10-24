@@ -1,0 +1,16 @@
+# Package versions of the environment used for the article (Python 3.13.15; full record in environment/).
+# Wheels are available for Linux, Windows and macOS. With Python 3.13:
+#   pip install -r requirements-lock.txt
+#   pip install -e ".[dev]"
+# On Windows and macOS pip installs the CPU build of torch, which is sufficient for every CPU experiment.
+numpy==2.1.3
+pandas==2.3.3
+pyarrow==23.0.1
+scipy==1.16.3
+scikit-learn==1.6.1
+joblib==1.6.0
+threadpoolctl==3.6.0
+torch==2.11.0
+matplotlib==3.10.0
+gdown==5.2.2
+pytest==8.4.2

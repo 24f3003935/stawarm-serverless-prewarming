@@ -1,0 +1,145 @@
+                                      family     param cold_rate cold_rare cold_medium  added_latency_ms_per_call  memory_vs_keepalive10
+                            fixed keep-alive     1 min    15.33%    12.41%      11.01%                      333.7                   0.38
+                            fixed keep-alive     2 min     8.91%    11.22%        9.6%                      129.2                   0.67
+                            fixed keep-alive     5 min     1.77%     9.74%       1.71%                       16.8                   0.91
+                            fixed keep-alive    10 min     1.16%     8.88%       1.04%                       11.5                   1.00
+                            fixed keep-alive    20 min     0.85%     7.35%        0.7%                        8.2                   1.12
+                            fixed keep-alive    60 min     0.53%     5.79%        0.4%                        5.8                   1.44
+                            hybrid histogram 4 h range     0.51%     4.56%       0.42%                        5.3                   1.41
+                 learned: own + app, no lead      0.02     0.22%     1.46%       0.01%                        2.0                   2.67
+                 learned: own + app, no lead      0.05     0.31%     2.75%       0.07%                        3.3                   1.85
+                 learned: own + app, no lead       0.1     0.74%     3.77%        0.2%                        6.7                   1.30
+                 learned: own + app, no lead      0.15     0.85%     4.22%       0.24%                        7.9                   1.15
+                 learned: own + app, no lead       0.2     0.93%     5.17%       0.28%                        8.5                   1.04
+                 learned: own + app, no lead      0.25      1.0%     6.04%       0.33%                        9.0                   0.93
+                 learned: own + app, no lead       0.3     1.06%     6.79%       0.38%                        9.7                   0.87
+                 learned: own + app, no lead       0.4     1.21%     8.06%       0.52%                       11.0                   0.80
+                 learned: own + app, no lead       0.5     1.44%     8.77%       0.64%                       18.3                   0.75
+                 learned: own + app, no lead       0.6     7.24%     9.35%       0.73%                      208.3                   0.56
+                 learned: own + app, no lead       0.7     7.62%    10.11%       0.81%                      246.7                   0.52
+                 learned: own + app, no lead       0.8     7.77%    10.51%       0.94%                      249.1                   0.50
+                 learned: own + app, no lead       0.9     8.15%    10.94%       1.45%                      252.8                   0.48
+           learned: LSTM-full (no attention)      0.02     0.07%     1.38%        0.0%                        0.8                   4.58
+           learned: LSTM-full (no attention)      0.05     0.18%     2.74%       0.06%                        2.1                   2.36
+           learned: LSTM-full (no attention)       0.1     0.36%     4.48%       0.21%                        5.1                   1.78
+           learned: LSTM-full (no attention)      0.15      0.5%     5.59%       0.33%                        6.5                   1.49
+           learned: LSTM-full (no attention)       0.2     0.62%     6.47%       0.43%                        7.6                   1.32
+           learned: LSTM-full (no attention)      0.25     0.84%     7.25%        0.5%                        9.2                   1.21
+           learned: LSTM-full (no attention)       0.3     0.98%     7.85%       0.59%                       10.3                   1.13
+           learned: LSTM-full (no attention)       0.4     1.19%     8.78%       0.74%                       11.8                   1.03
+           learned: LSTM-full (no attention)       0.5     1.41%     9.36%       0.86%                       13.2                   0.95
+           learned: LSTM-full (no attention)       0.6     1.62%     9.92%       1.09%                       14.9                   0.88
+           learned: LSTM-full (no attention)       0.7     1.77%    10.19%       1.26%                       16.1                   0.82
+           learned: LSTM-full (no attention)       0.8     2.22%    10.42%       1.49%                       18.9                   0.78
+           learned: LSTM-full (no attention)       0.9     7.19%     10.7%       2.34%                      105.7                   0.69
+learned: STAWarm-full (LSTM + app attention)      0.02     0.07%     1.25%        0.0%                        0.6                   4.65
+learned: STAWarm-full (LSTM + app attention)      0.05     0.17%     2.55%       0.04%                        1.7                   2.41
+learned: STAWarm-full (LSTM + app attention)       0.1     0.31%     3.46%       0.17%                        3.4                   1.67
+learned: STAWarm-full (LSTM + app attention)      0.15      0.4%     4.23%       0.24%                        4.3                   1.43
+learned: STAWarm-full (LSTM + app attention)       0.2     0.48%     4.79%        0.3%                        5.0                   1.30
+learned: STAWarm-full (LSTM + app attention)      0.25     0.53%     5.18%       0.34%                        5.5                   1.22
+learned: STAWarm-full (LSTM + app attention)       0.3     0.59%     5.59%       0.38%                        6.0                   1.16
+learned: STAWarm-full (LSTM + app attention)       0.4     0.66%     6.13%       0.44%                        6.6                   1.08
+learned: STAWarm-full (LSTM + app attention)       0.5     0.89%     7.05%       0.49%                        8.9                   1.02
+learned: STAWarm-full (LSTM + app attention)       0.6     1.13%     7.85%       0.59%                       11.0                   0.95
+learned: STAWarm-full (LSTM + app attention)       0.7     1.92%     8.67%       0.79%                       21.3                   0.89
+learned: STAWarm-full (LSTM + app attention)       0.8     4.43%      9.8%       0.97%                       51.3                   0.83
+learned: STAWarm-full (LSTM + app attention)       0.9     6.83%    10.69%       1.31%                      100.0                   0.73
+       learned: ensemble (trees + LSTM-full)      0.02     0.09%     1.21%       0.01%                        0.7                   3.16
+       learned: ensemble (trees + LSTM-full)      0.05     0.19%     2.31%       0.06%                        1.9                   2.21
+       learned: ensemble (trees + LSTM-full)       0.1     0.33%     3.25%       0.16%                        3.8                   1.60
+       learned: ensemble (trees + LSTM-full)      0.15     0.48%     4.25%        0.2%                        5.1                   1.37
+       learned: ensemble (trees + LSTM-full)       0.2     0.68%     5.29%       0.25%                        6.9                   1.23
+       learned: ensemble (trees + LSTM-full)      0.25     0.79%     6.06%       0.28%                        7.8                   1.13
+       learned: ensemble (trees + LSTM-full)       0.3     0.96%     7.08%       0.32%                        8.8                   1.05
+       learned: ensemble (trees + LSTM-full)       0.4     1.11%     8.56%       0.44%                       10.7                   0.92
+       learned: ensemble (trees + LSTM-full)       0.5     1.31%     9.56%       0.62%                       12.5                   0.83
+       learned: ensemble (trees + LSTM-full)       0.6     1.62%    10.18%       0.99%                       15.1                   0.74
+       learned: ensemble (trees + LSTM-full)       0.7     4.61%    10.43%       1.17%                       77.0                   0.67
+       learned: ensemble (trees + LSTM-full)       0.8     8.06%    10.65%        1.4%                      250.4                   0.50
+       learned: ensemble (trees + LSTM-full)       0.9     8.45%    11.18%       1.84%                      254.8                   0.47
+
+Prediction quality (AUPRC, real lead-time target, test period):
+                              model       target bucket  auprc  base_rate
+                 own + app, no lead lead-shifted   rare 0.1960     0.0011
+                 own + app, no lead lead-shifted medium 0.9315     0.0837
+                 own + app, no lead    near-term   rare 0.1861     0.0011
+                 own + app, no lead    near-term medium 0.9376     0.0836
+           LSTM-full (no attention) lead-shifted   rare 0.3491     0.0011
+           LSTM-full (no attention) lead-shifted medium 0.8284     0.0837
+           LSTM-full (no attention)    near-term   rare 0.3329     0.0011
+           LSTM-full (no attention)    near-term medium 0.8312     0.0835
+STAWarm-full (LSTM + app attention) lead-shifted   rare 0.3194     0.0011
+STAWarm-full (LSTM + app attention) lead-shifted medium 0.6612     0.0834
+STAWarm-full (LSTM + app attention)    near-term   rare 0.3292     0.0011
+STAWarm-full (LSTM + app attention)    near-term medium 0.6616     0.0838
+       ensemble (trees + LSTM-full) lead-shifted   rare 0.3619     0.0010
+       ensemble (trees + LSTM-full) lead-shifted medium 0.9113     0.0836
+       ensemble (trees + LSTM-full)    near-term   rare 0.3764     0.0011
+       ensemble (trees + LSTM-full)    near-term medium 0.9167     0.0838
+
+Cold-start rate by cold-start duration (functions per group: {'lead 1s': 230, 'lead 2-5s': 163, 'lead >5s': 31}):
+                                      family  param cold_lead 1s cold_lead 2-5s cold_lead >5s  memory_vs_keepalive10
+                            fixed keep-alive 10 min        0.94%          1.57%         2.55%                   1.00
+                 learned: own + app, no lead   0.02         0.2%          0.28%         0.31%                   2.67
+                 learned: own + app, no lead   0.05        0.25%          0.43%         0.67%                   1.85
+                 learned: own + app, no lead    0.1        0.55%          1.17%         1.09%                   1.30
+                 learned: own + app, no lead   0.15        0.65%          1.29%         1.41%                   1.15
+                 learned: own + app, no lead    0.2        0.72%           1.4%         1.53%                   1.04
+                 learned: own + app, no lead   0.25        0.77%           1.5%          1.6%                   0.93
+                 learned: own + app, no lead    0.3        0.82%          1.57%         1.85%                   0.87
+                 learned: own + app, no lead    0.4        0.95%          1.76%         2.23%                   0.80
+                 learned: own + app, no lead    0.5        1.13%          1.96%         4.17%                   0.75
+                 learned: own + app, no lead    0.6        5.51%          8.08%        47.02%                   0.56
+                 learned: own + app, no lead    0.7        5.63%          8.26%        56.82%                   0.52
+                 learned: own + app, no lead    0.8        5.74%          8.47%        57.22%                   0.50
+                 learned: own + app, no lead    0.9         6.0%          9.16%        57.63%                   0.48
+           learned: LSTM-full (no attention)   0.02        0.06%          0.09%         0.22%                   4.58
+           learned: LSTM-full (no attention)   0.05        0.13%          0.26%          0.6%                   2.36
+           learned: LSTM-full (no attention)    0.1        0.27%          0.48%         1.46%                   1.78
+           learned: LSTM-full (no attention)   0.15        0.39%          0.68%         1.69%                   1.49
+           learned: LSTM-full (no attention)    0.2        0.49%          0.83%         1.83%                   1.32
+           learned: LSTM-full (no attention)   0.25        0.64%          1.25%         1.95%                   1.21
+           learned: LSTM-full (no attention)    0.3        0.77%          1.42%         2.05%                   1.13
+           learned: LSTM-full (no attention)    0.4        0.95%          1.69%         2.22%                   1.03
+           learned: LSTM-full (no attention)    0.5        1.16%          1.93%         2.34%                   0.95
+           learned: LSTM-full (no attention)    0.6        1.31%           2.3%         2.54%                   0.88
+           learned: LSTM-full (no attention)    0.7        1.44%          2.51%         2.65%                   0.82
+           learned: LSTM-full (no attention)    0.8         1.9%          2.93%         2.96%                   0.78
+           learned: LSTM-full (no attention)    0.9        6.34%          8.31%        18.54%                   0.69
+learned: STAWarm-full (LSTM + app attention)   0.02        0.06%          0.08%         0.15%                   4.65
+learned: STAWarm-full (LSTM + app attention)   0.05        0.14%          0.19%          0.5%                   2.41
+learned: STAWarm-full (LSTM + app attention)    0.1        0.27%          0.38%         0.82%                   1.67
+learned: STAWarm-full (LSTM + app attention)   0.15        0.34%           0.5%         1.03%                   1.43
+learned: STAWarm-full (LSTM + app attention)    0.2         0.4%           0.6%         1.17%                   1.30
+learned: STAWarm-full (LSTM + app attention)   0.25        0.45%          0.67%         1.24%                   1.22
+learned: STAWarm-full (LSTM + app attention)    0.3        0.49%          0.76%         1.45%                   1.16
+learned: STAWarm-full (LSTM + app attention)    0.4        0.54%          0.87%         1.69%                   1.08
+learned: STAWarm-full (LSTM + app attention)    0.5         0.6%          1.52%         1.88%                   1.02
+learned: STAWarm-full (LSTM + app attention)    0.6        0.71%          2.07%         2.29%                   0.95
+learned: STAWarm-full (LSTM + app attention)    0.7        1.55%          2.66%         4.09%                   0.89
+learned: STAWarm-full (LSTM + app attention)    0.8        3.83%          5.57%         8.15%                   0.83
+learned: STAWarm-full (LSTM + app attention)    0.9        5.79%          8.47%        17.48%                   0.73
+       learned: ensemble (trees + LSTM-full)   0.02        0.08%           0.1%         0.15%                   3.16
+       learned: ensemble (trees + LSTM-full)   0.05        0.15%          0.26%          0.5%                   2.21
+       learned: ensemble (trees + LSTM-full)    0.1        0.26%          0.46%         0.93%                   1.60
+       learned: ensemble (trees + LSTM-full)   0.15        0.36%           0.7%         1.26%                   1.37
+       learned: ensemble (trees + LSTM-full)    0.2        0.49%           1.1%         1.53%                   1.23
+       learned: ensemble (trees + LSTM-full)   0.25        0.58%          1.24%         1.74%                   1.13
+       learned: ensemble (trees + LSTM-full)    0.3        0.74%           1.4%         1.81%                   1.05
+       learned: ensemble (trees + LSTM-full)    0.4        0.86%          1.62%         2.23%                   0.92
+       learned: ensemble (trees + LSTM-full)    0.5        1.03%          1.89%         2.54%                   0.83
+       learned: ensemble (trees + LSTM-full)    0.6        1.32%          2.22%         2.93%                   0.74
+       learned: ensemble (trees + LSTM-full)    0.7        3.88%           5.5%        15.12%                   0.67
+       learned: ensemble (trees + LSTM-full)    0.8        6.01%          8.87%         56.9%                   0.50
+       learned: ensemble (trees + LSTM-full)    0.9        6.23%          9.69%        57.27%                   0.47
+
+Best cold-start rate per policy family using no more memory than a 10-minute keep-alive:
+                                      family  param  cold_rate  memory_vs_keepalive10
+                 learned: own + app, no lead   0.25     0.0100                 0.9313
+       learned: ensemble (trees + LSTM-full)    0.4     0.0111                 0.9193
+learned: STAWarm-full (LSTM + app attention)    0.6     0.0113                 0.9455
+                            fixed keep-alive 10 min     0.0116                 1.0000
+           learned: LSTM-full (no attention)    0.5     0.0141                 0.9490
+
+finished in 55.0 min

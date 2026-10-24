@@ -1,0 +1,35 @@
+Runs: 3 (policies_huawei_day30_baselines_s0, policies_huawei_day30_baselines_s1, policies_huawei_day30_baselines_s2)
+10-minute keep-alive: 0.50% cold at memory 1.00
+
+Hybrid histogram: 0.22% cold at memory 2.01 (mean over runs)
+
+Cold-start rate at matched memory (mean +/- sd over runs; 'better' = runs below keep-alive; p = paired t-test vs keep-alive at 1.0x, p_holm = Holm-corrected over all policies listed):
+  own + app, no lead                  @0.8x 0.11% +/- 0.00%; @1.0x 0.09% +/- 0.00%; 81.4% fewer than keep-alive; better in 3/3; p=0.000, p_holm=0.000; slow fns @1.0x 1.16%
+  call rate only (no learning)        @0.8x 0.54% +/- 0.06%; @1.0x 0.42% +/- 0.01%; 17.2% fewer than keep-alive; better in 3/3; p=0.002, p_holm=0.002; slow fns @1.0x 6.74%
+  state-aware (trees)                 @0.8x 0.11% +/- 0.00%; @1.0x 0.10% +/- 0.00%; 81.2% fewer than keep-alive; better in 3/3; p=0.000, p_holm=0.000; slow fns @1.0x 1.37%
+
+Paired differences at 1.0x vs 'own + app, no lead' (negative = better):
+  call rate only (no learning)        mean +0.324 pts, better in 0/3, p=0.000
+  state-aware (trees)                 mean +0.001 pts, better in 1/3, p=0.764
+
+Prediction quality (AUPRC vs the true target, mean/sd over runs):
+                                                      mean     std  count
+model                        target       bucket                         
+call rate only (no learning) lead-shifted frequent  0.9413  0.0001      3
+                                          medium    0.1779  0.0005      3
+                                          rare      0.0403  0.0020      3
+                             near-term    frequent  0.9413  0.0002      3
+                                          medium    0.1772  0.0006      3
+                                          rare      0.0399  0.0015      3
+own + app, no lead           lead-shifted frequent  0.9800  0.0077      3
+                                          medium    0.8230  0.0196      3
+                                          rare      0.1927  0.1480      3
+                             near-term    frequent  0.9802  0.0076      3
+                                          medium    0.8386  0.0119      3
+                                          rare      0.1834  0.1350      3
+state-aware (trees)          lead-shifted frequent  0.9800  0.0078      3
+                                          medium    0.8227  0.0194      3
+                                          rare      0.1802  0.1237      3
+                             near-term    frequent  0.9800  0.0077      3
+                                          medium    0.8387  0.0124      3
+                                          rare      0.1932  0.1428      3

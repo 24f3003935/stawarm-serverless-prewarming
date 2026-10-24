@@ -1,0 +1,125 @@
+                               family     param cold_rate cold_rare cold_medium  added_latency_ms_per_call  memory_vs_keepalive10
+                     fixed keep-alive     1 min      1.7%    26.78%      39.06%                       17.2                   0.34
+                     fixed keep-alive     2 min     1.45%    26.78%      37.11%                       15.0                   0.46
+                     fixed keep-alive     5 min     0.69%    26.78%       17.0%                        6.5                   0.75
+                     fixed keep-alive    10 min      0.5%    26.54%      11.98%                        4.9                   1.00
+                     fixed keep-alive    20 min     0.33%    26.07%       7.32%                        3.3                   1.37
+                     fixed keep-alive    60 min     0.09%    25.36%       0.57%                        0.9                   1.95
+                     hybrid histogram 4 h range     0.22%    19.43%       3.59%                        2.3                   1.98
+          learned: own + app, no lead      0.02     0.03%    11.61%       0.09%                        0.3                   4.75
+          learned: own + app, no lead      0.05     0.04%     17.3%       0.26%                        0.4                   2.37
+          learned: own + app, no lead       0.1     0.08%    22.04%       0.51%                        0.8                   1.07
+          learned: own + app, no lead      0.15     0.11%    25.12%       0.68%                        1.0                   0.80
+          learned: own + app, no lead       0.2     0.12%    25.36%       0.84%                        1.1                   0.72
+          learned: own + app, no lead      0.25     0.14%     26.3%       1.02%                        1.2                   0.67
+          learned: own + app, no lead       0.3     0.15%     26.3%        1.3%                        1.3                   0.64
+          learned: own + app, no lead       0.4     0.18%    26.54%       1.99%                        1.5                   0.59
+          learned: own + app, no lead       0.5      0.2%    26.54%       2.58%                        1.7                   0.56
+          learned: own + app, no lead       0.6     0.24%    26.54%       3.44%                        2.1                   0.53
+          learned: own + app, no lead       0.7      0.3%    26.78%       5.02%                        2.6                   0.50
+          learned: own + app, no lead       0.8     0.35%    26.78%       6.43%                        3.1                   0.47
+          learned: own + app, no lead       0.9      0.5%    26.78%       9.96%                        4.6                   0.43
+learned: call rate only (no learning)      0.02     0.14%    25.36%       0.97%                        1.2                   1.85
+learned: call rate only (no learning)      0.05     0.31%    26.54%       5.99%                        2.9                   1.13
+learned: call rate only (no learning)       0.1     0.52%    26.54%      11.89%                        4.8                   0.87
+learned: call rate only (no learning)      0.15     0.59%    26.78%      13.91%                        5.7                   0.77
+learned: call rate only (no learning)       0.2     0.91%    26.78%      22.78%                        7.9                   0.60
+learned: call rate only (no learning)      0.25     1.07%    26.78%      27.42%                       10.9                   0.56
+learned: call rate only (no learning)       0.3     1.32%    26.78%      34.49%                       14.0                   0.52
+learned: call rate only (no learning)       0.4     1.37%    26.78%      35.82%                       14.4                   0.50
+learned: call rate only (no learning)       0.5     1.39%    26.78%       36.4%                       14.5                   0.45
+learned: call rate only (no learning)       0.6     1.49%    26.78%      37.69%                       15.4                   0.42
+learned: call rate only (no learning)       0.7     1.52%    26.78%      37.92%                       15.6                   0.40
+learned: call rate only (no learning)       0.8     1.55%    26.78%      38.08%                       15.8                   0.39
+learned: call rate only (no learning)       0.9     1.58%    26.78%       38.1%                       16.3                   0.37
+         learned: state-aware (trees)      0.02     0.03%    11.14%       0.08%                        0.3                   4.84
+         learned: state-aware (trees)      0.05     0.04%    15.64%       0.21%                        0.4                   2.29
+         learned: state-aware (trees)       0.1     0.09%     23.7%       0.47%                        0.9                   1.04
+         learned: state-aware (trees)      0.15     0.11%    24.64%        0.7%                        1.0                   0.85
+         learned: state-aware (trees)       0.2     0.11%    25.59%       0.85%                        1.1                   0.76
+         learned: state-aware (trees)      0.25     0.12%    26.54%       1.02%                        1.2                   0.71
+         learned: state-aware (trees)       0.3     0.14%    26.54%       1.26%                        1.3                   0.68
+         learned: state-aware (trees)       0.4     0.17%    26.54%       1.74%                        1.5                   0.64
+         learned: state-aware (trees)       0.5     0.19%    26.54%        2.2%                        1.7                   0.59
+         learned: state-aware (trees)       0.6     0.22%    26.78%       2.92%                        2.0                   0.55
+         learned: state-aware (trees)       0.7     0.27%    26.78%        4.2%                        2.4                   0.50
+         learned: state-aware (trees)       0.8     0.34%    26.78%       6.02%                        3.1                   0.47
+         learned: state-aware (trees)       0.9     0.51%    26.78%      10.32%                        4.5                   0.43
+           oracle (perfect predictor)  hold 5 s      0.0%      0.0%        0.0%                        0.0                   0.34
+           oracle (perfect predictor) hold 15 s      0.0%      0.0%        0.0%                        0.0                   0.37
+           oracle (perfect predictor) hold 30 s      0.0%      0.0%        0.0%                        0.0                   0.40
+           oracle (perfect predictor) hold 60 s      0.0%      0.0%        0.0%                        0.0                   0.46
+
+Prediction quality (AUPRC, real lead-time target, test period):
+                       model       target   bucket  auprc  base_rate
+          own + app, no lead lead-shifted     rare 0.3566     0.0007
+          own + app, no lead lead-shifted   medium 0.8111     0.0810
+          own + app, no lead lead-shifted frequent 0.9869     0.8913
+          own + app, no lead    near-term     rare 0.3302     0.0007
+          own + app, no lead    near-term   medium 0.8360     0.0810
+          own + app, no lead    near-term frequent 0.9869     0.8913
+call rate only (no learning) lead-shifted     rare 0.0390     0.0007
+call rate only (no learning) lead-shifted   medium 0.1774     0.0813
+call rate only (no learning) lead-shifted frequent 0.9411     0.8911
+call rate only (no learning)    near-term     rare 0.0386     0.0007
+call rate only (no learning)    near-term   medium 0.1775     0.0812
+call rate only (no learning)    near-term frequent 0.9411     0.8913
+         state-aware (trees) lead-shifted     rare 0.3112     0.0007
+         state-aware (trees) lead-shifted   medium 0.8111     0.0813
+         state-aware (trees) lead-shifted frequent 0.9869     0.8913
+         state-aware (trees)    near-term     rare 0.3475     0.0007
+         state-aware (trees)    near-term   medium 0.8345     0.0808
+         state-aware (trees)    near-term frequent 0.9870     0.8912
+
+Cold-start rate by cold-start duration (functions per group: {'lead 1s': 877, 'lead 2-5s': 638, 'lead >5s': 97}):
+                               family  param cold_lead 1s cold_lead 2-5s cold_lead >5s  memory_vs_keepalive10
+                     fixed keep-alive 10 min         0.5%          0.47%         1.31%                   1.00
+          learned: own + app, no lead   0.02        0.03%          0.02%          0.1%                   4.75
+          learned: own + app, no lead   0.05        0.05%          0.03%         0.15%                   2.37
+          learned: own + app, no lead    0.1         0.1%          0.05%         0.27%                   1.07
+          learned: own + app, no lead   0.15        0.11%          0.09%         0.29%                   0.80
+          learned: own + app, no lead    0.2        0.12%           0.1%         0.32%                   0.72
+          learned: own + app, no lead   0.25        0.16%          0.11%         0.34%                   0.67
+          learned: own + app, no lead    0.3        0.17%          0.12%         0.35%                   0.64
+          learned: own + app, no lead    0.4         0.2%          0.14%         0.36%                   0.59
+          learned: own + app, no lead    0.5        0.23%          0.17%          0.4%                   0.56
+          learned: own + app, no lead    0.6        0.26%           0.2%         0.47%                   0.53
+          learned: own + app, no lead    0.7        0.33%          0.25%         0.58%                   0.50
+          learned: own + app, no lead    0.8        0.39%          0.29%         0.73%                   0.47
+          learned: own + app, no lead    0.9        0.55%          0.41%         1.08%                   0.43
+learned: call rate only (no learning)   0.02        0.17%          0.09%          0.3%                   1.85
+learned: call rate only (no learning)   0.05        0.31%           0.3%         0.75%                   1.13
+learned: call rate only (no learning)    0.1        0.53%          0.48%         1.19%                   0.87
+learned: call rate only (no learning)   0.15         0.6%          0.55%         1.49%                   0.77
+learned: call rate only (no learning)    0.2        0.94%          0.85%         1.49%                   0.60
+learned: call rate only (no learning)   0.25        1.11%          0.91%         3.73%                   0.56
+learned: call rate only (no learning)    0.3        1.38%           1.1%         4.72%                   0.52
+learned: call rate only (no learning)    0.4        1.45%          1.12%         4.73%                   0.50
+learned: call rate only (no learning)    0.5        1.49%          1.12%         4.74%                   0.45
+learned: call rate only (no learning)    0.6        1.58%          1.24%         4.74%                   0.42
+learned: call rate only (no learning)    0.7        1.61%          1.27%         4.74%                   0.40
+learned: call rate only (no learning)    0.8        1.63%          1.31%         4.74%                   0.39
+learned: call rate only (no learning)    0.9        1.68%          1.31%         4.94%                   0.37
+         learned: state-aware (trees)   0.02        0.03%          0.02%          0.1%                   4.84
+         learned: state-aware (trees)   0.05        0.05%          0.03%         0.13%                   2.29
+         learned: state-aware (trees)    0.1         0.1%          0.08%         0.27%                   1.04
+         learned: state-aware (trees)   0.15        0.11%          0.09%          0.3%                   0.85
+         learned: state-aware (trees)    0.2        0.12%           0.1%         0.32%                   0.76
+         learned: state-aware (trees)   0.25        0.12%          0.11%         0.34%                   0.71
+         learned: state-aware (trees)    0.3        0.14%          0.12%         0.35%                   0.68
+         learned: state-aware (trees)    0.4        0.19%          0.14%         0.36%                   0.64
+         learned: state-aware (trees)    0.5        0.21%          0.16%         0.39%                   0.59
+         learned: state-aware (trees)    0.6        0.23%          0.19%         0.46%                   0.55
+         learned: state-aware (trees)    0.7        0.29%          0.23%         0.57%                   0.50
+         learned: state-aware (trees)    0.8        0.36%          0.31%         0.69%                   0.47
+         learned: state-aware (trees)    0.9        0.56%          0.43%         0.98%                   0.43
+
+Best cold-start rate per policy family using no more memory than a 10-minute keep-alive:
+                               family     param  cold_rate  memory_vs_keepalive10
+           oracle (perfect predictor) hold 15 s     0.0000                 0.3653
+          learned: own + app, no lead      0.15     0.0011                 0.7967
+         learned: state-aware (trees)      0.15     0.0011                 0.8507
+                     fixed keep-alive    10 min     0.0050                 1.0000
+learned: call rate only (no learning)       0.1     0.0052                 0.8651
+
+finished in 32.3 min

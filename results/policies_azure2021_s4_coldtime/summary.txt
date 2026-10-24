@@ -1,0 +1,52 @@
+                     family     param cold_rate cold_rare cold_medium  added_latency_ms_per_call  memory_vs_keepalive10
+           fixed keep-alive     1 min    15.33%    12.41%      11.01%                      218.4                   0.39
+           fixed keep-alive     2 min     8.91%    11.22%        9.6%                      139.5                   0.71
+           fixed keep-alive     5 min     1.77%     9.74%       1.71%                       14.3                   0.90
+           fixed keep-alive    10 min     1.16%     8.88%       1.04%                        8.2                   1.00
+           fixed keep-alive    20 min     0.85%     7.35%        0.7%                        6.4                   1.14
+           fixed keep-alive    60 min     0.53%     5.79%        0.4%                        4.0                   1.45
+           hybrid histogram 4 h range     0.51%     4.56%       0.42%                        4.0                   1.42
+learned: own + app, no lead      0.02     0.23%     1.63%       0.01%                        1.8                   2.64
+learned: own + app, no lead      0.05     0.31%     2.91%       0.08%                        2.4                   1.83
+learned: own + app, no lead       0.1      0.7%     3.84%       0.19%                        7.4                   1.40
+learned: own + app, no lead      0.15     0.82%     4.51%       0.22%                        8.2                   1.25
+learned: own + app, no lead       0.2     0.89%     5.35%       0.27%                        8.7                   1.12
+learned: own + app, no lead      0.25     0.95%     6.19%       0.31%                        9.4                   1.03
+learned: own + app, no lead       0.3     1.03%     6.86%       0.38%                        9.9                   0.95
+learned: own + app, no lead       0.4     1.28%     8.14%       0.51%                       12.8                   0.84
+learned: own + app, no lead       0.5     2.21%     8.81%       0.62%                       29.8                   0.79
+learned: own + app, no lead       0.6     2.35%     9.55%       0.69%                       31.3                   0.76
+learned: own + app, no lead       0.7     7.48%     9.99%       0.77%                       99.8                   0.51
+learned: own + app, no lead       0.8     7.72%    10.46%       0.94%                      101.9                   0.49
+learned: own + app, no lead       0.9     8.24%    10.99%       1.56%                      105.5                   0.47
+
+Prediction quality (AUPRC, real lead-time target, test period):
+             model       target bucket  auprc  base_rate
+own + app, no lead lead-shifted   rare 0.1688     0.0010
+own + app, no lead lead-shifted medium 0.9244     0.0836
+own + app, no lead    near-term   rare 0.1686     0.0010
+own + app, no lead    near-term medium 0.9400     0.0835
+
+Cold-start rate by cold-start duration (functions per group: {'lead 1s': 234, 'lead 2-5s': 165, 'lead >5s': 25}):
+                     family  param cold_lead 1s cold_lead 2-5s cold_lead >5s  memory_vs_keepalive10
+           fixed keep-alive 10 min        0.99%           1.4%         2.07%                   1.00
+learned: own + app, no lead   0.02        0.18%          0.27%         0.84%                   2.64
+learned: own + app, no lead   0.05        0.24%          0.38%         1.27%                   1.83
+learned: own + app, no lead    0.1        0.33%          0.54%        11.46%                   1.40
+learned: own + app, no lead   0.15        0.39%          0.79%        11.58%                   1.25
+learned: own + app, no lead    0.2        0.44%          0.86%        11.76%                   1.12
+learned: own + app, no lead   0.25         0.5%          0.94%        12.05%                   1.03
+learned: own + app, no lead    0.3        0.57%          1.02%        12.12%                   0.95
+learned: own + app, no lead    0.4        0.75%          1.44%        12.24%                   0.84
+learned: own + app, no lead    0.5        0.83%          4.02%        12.44%                   0.79
+learned: own + app, no lead    0.6        0.93%          4.22%        12.86%                   0.76
+learned: own + app, no lead    0.7        5.22%          9.34%        38.35%                   0.51
+learned: own + app, no lead    0.8        5.43%          9.58%        39.03%                   0.49
+learned: own + app, no lead    0.9        5.83%         10.36%         39.2%                   0.47
+
+Best cold-start rate per policy family using no more memory than a 10-minute keep-alive:
+                     family  param  cold_rate  memory_vs_keepalive10
+learned: own + app, no lead    0.3     0.0103                 0.9492
+           fixed keep-alive 10 min     0.0116                 1.0000
+
+finished in 22.5 min

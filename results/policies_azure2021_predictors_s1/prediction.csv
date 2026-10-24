@@ -1,0 +1,17 @@
+model,target,bucket,auprc,base_rate
+"own + app, no lead",lead-shifted,rare,0.19604847679889187,0.0010896666666666667
+"own + app, no lead",lead-shifted,medium,0.9315466223779517,0.08367366666666666
+"own + app, no lead",near-term,rare,0.18609074789604438,0.0010716666666666667
+"own + app, no lead",near-term,medium,0.9376146044713377,0.08362333333333333
+LSTM-full (no attention),lead-shifted,rare,0.3491052640834172,0.0010693333333333334
+LSTM-full (no attention),lead-shifted,medium,0.8284282574067521,0.08368533333333333
+LSTM-full (no attention),near-term,rare,0.33287739766775903,0.0010716666666666667
+LSTM-full (no attention),near-term,medium,0.8312084860362055,0.08349133333333333
+STAWarm-full (LSTM + app attention),lead-shifted,rare,0.3193710261723523,0.0010643333333333334
+STAWarm-full (LSTM + app attention),lead-shifted,medium,0.6612168204118618,0.08344366666666667
+STAWarm-full (LSTM + app attention),near-term,rare,0.32923556465951165,0.0010716666666666667
+STAWarm-full (LSTM + app attention),near-term,medium,0.6615591596364973,0.08379033333333333
+ensemble (trees + LSTM-full),lead-shifted,rare,0.36190877536203897,0.001014
+ensemble (trees + LSTM-full),lead-shifted,medium,0.911342012874611,0.08356066666666667
+ensemble (trees + LSTM-full),near-term,rare,0.3764295645372486,0.001065
+ensemble (trees + LSTM-full),near-term,medium,0.9167438875347232,0.083821

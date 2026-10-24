@@ -1,0 +1,35 @@
+Runs: 3 (policies_azure2021_predictors_s0, policies_azure2021_predictors_s1, policies_azure2021_predictors_s2)
+10-minute keep-alive: 1.16% cold at memory 1.00
+
+Hybrid histogram: 0.51% cold at memory 1.61 (mean over runs)
+
+Cold-start rate at matched memory (mean +/- sd over runs; 'better' = runs below keep-alive; p = paired t-test vs keep-alive at 1.0x, p_holm = Holm-corrected over all policies listed):
+  own + app, no lead                  @0.8x 1.56% +/- 0.54%; @1.0x 0.95% +/- 0.02%; 18.2% fewer than keep-alive; better in 3/3; p=0.003, p_holm=0.011; slow fns @1.0x 16.52%
+  LSTM-full (no attention)            @0.8x 2.00% +/- 0.75%; @1.0x 1.32% +/- 0.50%; -14.2% fewer than keep-alive; better in 1/3; p=0.628, p_holm=0.628; slow fns @1.0x 11.74%
+  STAWarm-full (LSTM + app attention) @0.8x 2.56% +/- 2.31%; @1.0x 0.88% +/- 0.09%; 24.2% fewer than keep-alive; better in 3/3; p=0.035, p_holm=0.104; slow fns @1.0x 18.97%
+  ensemble (trees + LSTM-full)        @0.8x 1.51% +/- 0.39%; @1.0x 1.00% +/- 0.08%; 13.6% fewer than keep-alive; better in 3/3; p=0.084, p_holm=0.167; slow fns @1.0x 17.36%
+
+Paired differences at 1.0x vs 'own + app, no lead' (negative = better):
+  LSTM-full (no attention)            mean +0.375 pts, better in 1/3, p=0.338
+  STAWarm-full (LSTM + app attention) mean -0.069 pts, better in 3/3, p=0.364
+  ensemble (trees + LSTM-full)        mean +0.054 pts, better in 1/3, p=0.451
+
+Prediction quality (AUPRC vs the true target, mean/sd over runs):
+                                                           mean     std  count
+model                               target       bucket                       
+LSTM-full (no attention)            lead-shifted medium  0.8349  0.0084      3
+                                                 rare    0.3465  0.0310      3
+                                    near-term    medium  0.8366  0.0075      3
+                                                 rare    0.3324  0.0341      3
+STAWarm-full (LSTM + app attention) lead-shifted medium  0.7948  0.1164      3
+                                                 rare    0.3435  0.0310      3
+                                    near-term    medium  0.7957  0.1169      3
+                                                 rare    0.3462  0.0396      3
+ensemble (trees + LSTM-full)        lead-shifted medium  0.9202  0.0163      3
+                                                 rare    0.3700  0.0189      3
+                                    near-term    medium  0.9231  0.0152      3
+                                                 rare    0.3788  0.0124      3
+own + app, no lead                  lead-shifted medium  0.9358  0.0043      3
+                                                 rare    0.1987  0.0381      3
+                                    near-term    medium  0.9392  0.0026      3
+                                                 rare    0.2010  0.0363      3

@@ -1,0 +1,15 @@
+Runs: 3 (policies_azure2021_d2_load_rand_conservative_s0, policies_azure2021_d2_load_rand_conservative_s1, policies_azure2021_d2_load_rand_conservative_s2)
+10-minute keep-alive: 1.16% cold at memory 1.00
+
+Hybrid histogram: 0.51% cold at memory 1.62 (mean over runs)
+
+Cold-start rate at matched memory (mean +/- sd over runs; 'better' = runs below keep-alive; p = paired t-test vs keep-alive at 1.0x, p_holm = Holm-corrected over all policies listed):
+  own + app, no lead                  @0.8x 1.69% +/- 0.68%; @1.0x 0.96% +/- 0.02%; 16.9% fewer than keep-alive; better in 3/3; p=0.003, p_holm=0.003; slow fns @1.0x 16.23%
+
+Prediction quality (AUPRC vs the true target, mean/sd over runs):
+                                          mean     std  count
+model              target       bucket                       
+own + app, no lead lead-shifted medium  0.9358  0.0043      3
+                                rare    0.1987  0.0381      3
+                   near-term    medium  0.9392  0.0026      3
+                                rare    0.2010  0.0363      3

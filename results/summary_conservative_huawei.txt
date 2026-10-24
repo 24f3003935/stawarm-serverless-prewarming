@@ -1,0 +1,17 @@
+Runs: 3 (policies_huawei_day30_d2_load_rand_conservative_s0, policies_huawei_day30_d2_load_rand_conservative_s1, policies_huawei_day30_d2_load_rand_conservative_s2)
+10-minute keep-alive: 0.50% cold at memory 1.00
+
+Hybrid histogram: 0.22% cold at memory 2.01 (mean over runs)
+
+Cold-start rate at matched memory (mean +/- sd over runs; 'better' = runs below keep-alive; p = paired t-test vs keep-alive at 1.0x, p_holm = Holm-corrected over all policies listed):
+  own + app, no lead                  @0.8x 0.11% +/- 0.00%; @1.0x 0.09% +/- 0.00%; 81.3% fewer than keep-alive; better in 3/3; p=0.000, p_holm=0.000; slow fns @1.0x 1.16%
+
+Prediction quality (AUPRC vs the true target, mean/sd over runs):
+                                            mean     std  count
+model              target       bucket                         
+own + app, no lead lead-shifted frequent  0.9800  0.0077      3
+                                medium    0.8230  0.0196      3
+                                rare      0.1927  0.1480      3
+                   near-term    frequent  0.9802  0.0076      3
+                                medium    0.8386  0.0119      3
+                                rare      0.1834  0.1350      3

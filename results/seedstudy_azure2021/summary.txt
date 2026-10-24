@@ -1,0 +1,13 @@
+Five-seed study (azure2021, scale 1, seeds [0, 1, 2, 3, 4]): learned no-lead policy, cold-start rate read at matched memory (x = memory relative to a 10-minute keep-alive).
+
+plain    : cold@0.8 1.42% ± 0.46%; cold@1.0 0.97% ± 0.16%; cold_slow@0.8 14.59% ± 20.33%; cold_slow@1.0 12.54% ± 18.79%
+coldtime : cold@0.8 1.67% ± 0.45%; cold@1.0 0.95% ± 0.02%; cold_slow@0.8 14.08% ± 20.46%; cold_slow@1.0 12.50% ± 19.27%
+keep-alive 10 min (1.0x): cold 1.16% ± 0.00%; slow functions 8.52%
+
+Paired difference per seed (coldtime - plain; negative = the cold-start-time input helps):
+  cold@0.8        mean +0.249 pts, sd 0.540, helps in 3 of 5 seeds
+  cold@1.0        mean -0.017 pts, sd 0.145, helps in 1 of 5 seeds
+  cold_slow@0.8   mean -0.512 pts, sd 0.636, helps in 4 of 5 seeds
+  cold_slow@1.0   mean -0.047 pts, sd 0.604, helps in 3 of 5 seeds
+
+Learned (plain) vs keep-alive at equal memory: 16.4% fewer cold starts (range -7.7% to 27.6% over seeds)
